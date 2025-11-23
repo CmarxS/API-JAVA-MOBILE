@@ -15,7 +15,7 @@ COPY src ./src
 RUN mvn clean install -DskipTests
 
 # Usando uma imagem base mais leve para executar o aplicativo
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jre
 
 # Expor a porta 8080
 EXPOSE 8080
