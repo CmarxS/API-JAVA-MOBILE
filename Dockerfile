@@ -12,7 +12,7 @@ COPY pom.xml .
 COPY src ./src
 
 # Executando a construção do Maven, ignorando os testes
-RUN mvn clean install -DskipTests
+RUN mvn clean install -DskipTests -Dproject.build.sourceEncoding=UTF-8
 
 # Usando uma imagem base mais leve para executar o aplicativo
 FROM eclipse-temurin:21-jre
